@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/loginFragment">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="br.com.odd.scania_akd.LoginFragment"
+        android:label="Login"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_loginFragment_to_esqueceuSenhaFragment"
+            app:destination="@id/esqueceuSenhaFragment"
+            app:popUpTo="@id/loginFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_cadastroFragment"
+            app:destination="@id/cadastroFragment"
+            app:popUpTo="@id/loginFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_pesquisasFragment"
+            app:destination="@id/pesquisasFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/cadastroFragment"
+        android:name="br.com.odd.scania_akd.CadastroFragment"
+        android:label="Cadastro"
+        tools:layout="@layout/fragment_cadastro">
+        <action
+            android:id="@+id/action_cadastroFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/esqueceuSenhaFragment"
+        android:name="br.com.odd.scania_akd.EsqueceuSenhaFragment"
+        android:label="Recuperação de Senha"
+        tools:layout="@layout/fragment_esqueceu_senha">
+        <action
+            android:id="@+id/action_esqueceuSenhaFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/pesquisasFragment"
+        android:name="br.com.odd.scania_akd.PesquisasFragment"
+        android:label="Pesquisas"
+        tools:layout="@layout/fragment_pesquisas">
+        <action
+            android:id="@+id/action_pesquisasFragment_to_perguntasFragment"
+            app:destination="@id/perguntasFragment"
+            app:popUpTo="@id/pesquisasFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/perguntasFragment"
+        android:name="br.com.odd.scania_akd.PerguntasFragment"
+        android:label="Perguntas"
+        tools:layout="@layout/fragment_perguntas">
+        <action
+            android:id="@+id/action_perguntasFragment_to_respostasFragment"
+            app:destination="@id/respostasFragment"
+            app:popUpTo="@id/pesquisasFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/respostasFragment"
+        android:name="br.com.odd.scania_akd.RespostasFragment"
+        android:label="Respostas"
+        tools:layout="@layout/fragment_respostas" />
+</navigation>

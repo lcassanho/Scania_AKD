@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".RespostasFragment">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center_horizontal"
+                android:letterSpacing="0.1"
+                android:text="@string/tvTitleRespostas"
+                android:textAppearance="?attr/textAppearanceHeadline1"
+                android:textSize="20sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvSubTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginHorizontal="20dp"
+                android:gravity="center_horizontal"
+                android:text="@string/tvSubTitleRespostas"
+                android:textAppearance="?attr/subheaderTextAppearance"
+                android:textSize="14sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvTitle" />
+
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardPesquisa1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginVertical="20dp"
+                app:layout_constraintLeft_toRightOf="parent"
+                app:layout_constraintRight_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvSubTitle"
+                app:strokeColor="@color/blue_40"
+                app:strokeWidth="1dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="20dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/tvTitleCard01Respostas"
+                            android:textAppearance="?attr/textAppearanceHeadline6" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:padding="5dp"
+                            android:layout_marginTop="10dp"
+                            >
+
+                            <ImageView
+                                android:src="@drawable/ic_baseline_send"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:scaleType="center"
+                                android:paddingTop="8dp"
+                                android:paddingBottom="8dp"
+                                android:paddingStart="16dp"
+                                android:paddingEnd="16dp"
+                                android:contentDescription="@string/altPontosRespostas" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="30dp"
+                                android:gravity="center_vertical"
+                                android:layout_marginStart="10dp"
+                                android:text="@string/tvSubTitle01Card01Respostas"
+                                android:maxLines="1"
+                                android:textAppearance="?attr/textAppearanceBody2"
+                                android:textColor="?android:attr/textColorSecondary"/>
+
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:padding="5dp"
+                            >
+
+                            <ImageView
+                                android:src="@drawable/ic_baseline_send"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:scaleType="center"
+                                android:paddingTop="8dp"
+                                android:paddingBottom="8dp"
+                                android:paddingStart="16dp"
+                                android:paddingEnd="16dp"
+                                android:contentDescription="@string/altPontosRespostas" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="30dp"
+                                android:gravity="center_vertical"
+                                android:layout_marginStart="10dp"
+                                android:text="@string/tvSubTitle02Card01Respostas"
+                                android:maxLines="1"
+                                android:textAppearance="?attr/textAppearanceBody2"
+                                android:textColor="?android:attr/textColorSecondary"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:padding="5dp">
+
+                            <ImageView
+                                android:src="@drawable/ic_baseline_send"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:scaleType="center"
+                                android:paddingTop="8dp"
+                                android:paddingBottom="8dp"
+                                android:paddingStart="16dp"
+                                android:paddingEnd="16dp"
+                                android:contentDescription="@string/altPontosRespostas" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="30dp"
+                                android:gravity="center_vertical"
+                                android:layout_marginStart="10dp"
+                                android:text="@string/tvSubTitle03Card01Respostas"
+                                android:maxLines="1"
+                                android:textAppearance="?attr/textAppearanceBody2"
+                                android:textColor="?android:attr/textColorSecondary"/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <Button
+                android:id="@+id/btProsseguir"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/btBonus"
+                android:layout_marginHorizontal="80dp"
+                android:layout_marginTop="40dp"
+                android:text="@string/btAtendimentoRespostas"
+                />
+
+            <Button
+                android:id="@+id/btBonus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginHorizontal="80dp"
+                android:layout_marginBottom="40dp"
+                android:text="@string/btBonusRespostas"
+                />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</layout>

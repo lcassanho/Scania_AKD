@@ -1,0 +1,38 @@
+package br.com.odd.scania_akd
+
+import android.os.Bundle
+import androidx.fragment.app.Fragment
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
+import androidx.databinding.DataBindingUtil
+import androidx.navigation.findNavController
+import br.com.odd.scania_akd.databinding.FragmentLoginBinding
+
+class LoginFragment : Fragment() {
+
+    private lateinit var binding: FragmentLoginBinding
+
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        // Inflate the layout for this fragment
+        binding = DataBindingUtil.inflate(inflater, R.layout.fragment_login, container, false)
+
+        binding.btCadastrar.setOnClickListener {
+            view?.findNavController()?.navigate(R.id.action_loginFragment_to_cadastroFragment)
+        }
+
+        binding.tvEsqueceuSenha.setOnClickListener{
+            view?.findNavController()?.navigate(R.id.action_loginFragment_to_esqueceuSenhaFragment)
+        }
+
+        binding.btEntrar.setOnClickListener{
+            view?.findNavController()?.navigate(R.id.action_loginFragment_to_pesquisasFragment)
+        }
+
+
+        return binding.root
+    }
+}
